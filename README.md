@@ -1,3 +1,5 @@
+*disclamer : this might not work, I used this program i created to fix one of my file and share it because it might be usefull for someone else but it might not work for all file, so be carefull when using it*
+
 # libreofficepermacropfix
 
 When you crop a picture in libreoffice, it keep the original file which might be dangerous if the uncropped picture contain sensitive data.
