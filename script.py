@@ -42,12 +42,9 @@ for i in img :
     
 content = re.sub(r'(<draw:frame draw:style-name="([^"]+)" .*? svg:width="[0-9.]+cm" svg:height="[0-9.]+cm" [^>]*><draw:image xlink:href=")[^"]+(" [^>]*></draw:frame>)',r"\1Pictures/\2.png\3",content)
 
-open("contentfixed2.xml", "x", encoding="utf8").write(content)
-
-
 content = re.sub(r'(<style:style style:name="[^"]+" [^>]+><style:graphic-properties [^>]*? fo:clip=")rect\(-?[0-9.]+cm, -?[0-9.]+cm, -?[0-9.]+cm, -?[0-9.]+cm\)"',r'\1rect(0cm, 0cm, 0cm, 0cm)"',content)
 
-open("contentfixed3.xml", "x", encoding="utf8").write(content)
+open("contentfixed.xml", "x", encoding="utf8").write(content)
     
 #print(style)
 #print(img)
