@@ -1,12 +1,19 @@
-*disclamer : this might not work, I used this program i created to fix one of my file and share it because it might be usefull for someone else but it might not work for all file, so be carefull when using it*
+*disclamer : keep a save of your file and check if everything is okay after using this program, it might broke some things*
 
-# libreofficepermacropfix
+*important : this program use NConvert which is included to help you using this script, nconvert is free for private non commercial or educationnal use, but paid otherwise, please check the license in the nconvert folder*
 
-When you crop a picture in libreoffice, it keep the original file which might be dangerous if the uncropped picture contain sensitive data.
-This python programme permanantly crop the picture by cropping picture using nconvert and using it instead.
+# LibreOffice Crop Fix
 
-Also, cropped image create strange image glitch on old version of libreoffice so this might fix some files.
+On old version of libreoffice, opening a file containing cropped image might result with glitched image.
+When you crop a picture in libreoffice, the original file is keeped which allow you to change the crop later.
+This python programme permanantly replace image with cropped image, which have for effect to fix the glitch.
 
+# Usage
+Download the software and drag & drop your odt file on the python file (you must have python installed).
+This should create an `odt_fixed.odt` file. Open it, libreoffice should tell you the file is broken and ask you if you want to repair it.
+Accept and save the repaired file.
 
-How to use :
-Unzip your odt file, put the python program inside it. Download nconvert and change the location of nconvert in the python file. Run the program. Replace content.xml with contentfixed.xml. Go in Pictures Folder and delete sensitive image. Zip all file (be sure they are at the root of the zip file) and rename it to an odt. Open the odt, let libreoffice fix the file.
+# Privacy
+Having libre office keep the uncropped file might be dangerous if the uncropped picture contain sensitive data.
+By using this program to permanantly crop image, you can avoid that.
+Normally, the odt_fixed.odt file should still have the uncropped file in it's data, but the uncropped file should be deleted after you let libreoffice repair the file.
